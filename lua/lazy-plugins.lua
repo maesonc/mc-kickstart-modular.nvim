@@ -40,7 +40,25 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
+  -- require 'kickstart/plugins/tokyonight',
+
+  require 'custom/plugins/main/betterf',
+
+  require 'custom/plugins/main/fugitive',
+
+  require 'custom/plugins/main/tmux-navigator',
+
+  require 'custom/plugins/main/nerdtree',
+
+  require 'custom/plugins/main/floatterm',
+
+  require 'custom/plugins/main/eunuch',
+
+  require 'custom/plugins/main/lualine',
+
+  -- require 'custom/plugins/themes/catppuccin',
+
+  require 'custom/plugins/themes/kanagawa',
 
   require 'kickstart/plugins/todo-comments',
 

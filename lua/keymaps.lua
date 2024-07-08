@@ -3,7 +3,7 @@
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '=h', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
@@ -48,4 +48,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- vim: ts=2 sts=2 sw=2 et
+vim.api.nvim_set_keymap('n', '<leader>z', '<C-w>=', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>Z', '<C-w>|', { noremap = true, silent = true })
