@@ -40,31 +40,47 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  -- require 'kickstart/plugins/tokyonight',
-
   require 'custom/plugins/main/betterf',
+
+  require 'custom/plugins/main/quickhl',
 
   require 'custom/plugins/main/fugitive',
 
+  require 'custom/plugins/main/nvim-surround',
+
   require 'custom/plugins/main/tmux-navigator',
 
-  require 'custom/plugins/main/nerdtree',
+  require 'custom/plugins/main/dashboard',
 
   require 'custom/plugins/main/floatterm',
 
   require 'custom/plugins/main/eunuch',
 
-  require 'custom/plugins/main/lualine',
+  require 'custom/plugins/main/lsp-lines',
+
+  require 'kickstart/plugins/todo-comments',
+
+  require 'kickstart/plugins/treesitter',
+
+  require 'custom/plugins/main/sunglasses',
+
+  require 'custom/plugins/main/markdown',
+
+  require 'custom/plugins/main/markdown-preview',
+
+  require 'custom/plugins/main/obsidian',
+
+  -- require 'kickstart/plugins/tokyonight',
 
   -- require 'custom/plugins/themes/catppuccin',
 
   require 'custom/plugins/themes/kanagawa',
 
-  require 'kickstart/plugins/todo-comments',
+  -- require 'custom/plugins/themes/nightfox',
 
-  require 'kickstart/plugins/mini',
+  -- require 'custom/plugins/themes/everforest',
 
-  require 'kickstart/plugins/treesitter',
+  require 'custom/plugins/main/lualine',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -75,11 +91,11 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

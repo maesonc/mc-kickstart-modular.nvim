@@ -6,6 +6,13 @@
 return {
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
+    config = function()
+      vim.cmd [[
+      hi GitSignsAdd guibg=NONE 
+      hi GitSignsChange guibg=NONE 
+      hi GitSignsDelete guibg=NONE 
+      ]]
+    end,
     opts = {
       signs = {
         add = { text = '+' },

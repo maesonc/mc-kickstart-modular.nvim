@@ -8,10 +8,11 @@ return {
       vim.api.nvim_set_keymap('t', '<leader>\\', '<leader>closefloat:FloatermToggle<CR>', { noremap = false, silent = true })
 
       vim.cmd [[
-      let g:floaterm_width =0.5 
-      let g:floaterm_height = 0.5
+      hi FloatermBorder ctermbg=NONE guibg=NONE 
+      let g:floaterm_width =0.7 
+      let g:floaterm_height = 0.8
       let g:floaterm_wintype = 'float'
-      let g:floaterm_position = 'bottomright'
+      " let g:floaterm_position = 'bottomright'
       let g:floaterm_title = 'Terminal $1|$2'
       let g:floaterm_borderchars = '─│─│╭╮╯╰'
       let g:floaterm_autoinsert = v:true ]]

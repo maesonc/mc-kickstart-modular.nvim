@@ -25,6 +25,9 @@ return {
           --     require('luasnip.loaders.from_vscode').lazy_load()
           --   end,
           -- },
+          {
+            'lukas-reineke/cmp-under-comparator',
+          },
         },
       },
       'saadparwaiz1/cmp_luasnip',
@@ -48,6 +51,17 @@ return {
           end,
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
+        sorting = {
+          comparators = {
+            require('cmp-under-comparator').under,
+            cmp.config.compare.score,
+            cmp.config.compare.locality,
+            cmp.config.compare.offset,
+            cmp.config.compare.scopes,
+            cmp.config.compare.kind,
+            cmp.config.compare.exact,
+          },
+        },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`

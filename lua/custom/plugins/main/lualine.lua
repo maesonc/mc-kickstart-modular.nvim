@@ -3,10 +3,13 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     init = function()
+      local custom_color = require 'lualine.themes.nightfly'
+      custom_color.inactive.c.bg = 'NONE'
+      custom_color.inactive.c.fg = '#C8C093'
       require('lualine').setup {
         options = {
           icons_enabled = true,
-          theme = 'auto',
+          theme = custom_color,
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
           disabled_filetypes = {

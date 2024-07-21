@@ -1,7 +1,8 @@
 return {
   {
     'jjshoots/betterf.nvim',
-    init = function()
+    -- all labels to use in order, the last character is used for accessing overflow indices
+    config = function()
       require('betterf').setup {
         -- all labels to use in order, the last character is used for accessing overflow indices
         labels = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ';' },
@@ -11,8 +12,8 @@ return {
 
         -- forward and backward search mappings
         mappings = {
-          '<leader>f',
-          '<leader>F',
+          'f',
+          'F',
         },
       }
     end,
