@@ -2,9 +2,11 @@
 return {
   {
     'folke/todo-comments.nvim',
-    event = 'VimEnter',
+    event = 'VeryLazy',
     dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = { signs = false },
+    opts = {
+      signs = false,
+    },
     config = {
       vim.keymap.set('n', ']t', function()
         require('todo-comments').jump_next()

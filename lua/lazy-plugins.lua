@@ -40,6 +40,10 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
+  require 'kickstart/plugins/todo-comments',
+
+  require 'kickstart/plugins/treesitter',
+
   require 'custom/plugins/main/betterf',
 
   require 'custom/plugins/main/quickhl',
@@ -58,10 +62,6 @@ require('lazy').setup({
 
   require 'custom/plugins/main/lsp-lines',
 
-  require 'kickstart/plugins/todo-comments',
-
-  require 'kickstart/plugins/treesitter',
-
   require 'custom/plugins/main/sunglasses',
 
   require 'custom/plugins/main/markdown',
@@ -70,17 +70,15 @@ require('lazy').setup({
 
   require 'custom/plugins/main/obsidian',
 
-  -- require 'kickstart/plugins/tokyonight',
+  require 'custom/plugins/main/statuscol',
 
-  -- require 'custom/plugins/themes/catppuccin',
-
-  require 'custom/plugins/themes/kanagawa',
-
-  -- require 'custom/plugins/themes/nightfox',
-
-  -- require 'custom/plugins/themes/everforest',
+  require 'custom/plugins/main/ufo',
 
   require 'custom/plugins/main/lualine',
+
+  -- require 'kickstart/plugins/tokyonight',
+
+  require 'custom/plugins/themes/kanagawa',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and

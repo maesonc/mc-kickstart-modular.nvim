@@ -50,3 +50,27 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.api.nvim_set_keymap('n', '<leader>z', '<C-w>=', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>Z', '<C-w>|', { noremap = true, silent = true })
+
+local function toggle_diffthis()
+  local bufname = vim.api.nvim_buf_get_name(0)
+  local diff_enabled = false
+
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    if vim.api.nvim_win_get_config(win).relative == '' then
+      local buf = vim.api.nvim_win_get_buf(win)
+      if vim.api.nvim_buf_get_option(buf, 'diff') then
+        diff_enabled = true
+        break
+      end
+    end
+  end
+
+  if diff_enabled then
+    vim.cmd 'windo diffoff'
+  else
+    vim.cmd 'windo diffthis'
+  end
+end
+
+vim.api.nvim_set_keymap('n', '<leader>di', ':windo diffthis <CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>dc', ':windo diffoff <CR>', { noremap = true, silent = true })

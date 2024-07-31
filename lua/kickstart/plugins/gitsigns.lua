@@ -7,11 +7,11 @@ return {
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     config = function()
-      vim.cmd [[
-      hi GitSignsAdd guibg=NONE 
-      hi GitSignsChange guibg=NONE 
-      hi GitSignsDelete guibg=NONE 
-      ]]
+      -- vim.cmd [[
+      -- hi GitSignsAdd ctermbg=NONE
+      -- hi GitSignsChange ctermbg=NONE
+      -- hi GitSignsDelete ctermbg=NONE
+      -- ]]
     end,
     opts = {
       signs = {
