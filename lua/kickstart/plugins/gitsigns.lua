@@ -6,20 +6,19 @@
 return {
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
-    config = function()
-      -- vim.cmd [[
-      -- hi GitSignsAdd ctermbg=NONE
-      -- hi GitSignsChange ctermbg=NONE
-      -- hi GitSignsDelete ctermbg=NONE
-      -- ]]
+    init = function()
+      require('gitsigns').setup {
+        numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
+        linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+      }
     end,
     opts = {
       signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
+        add = { text = '｜' },
+        change = { text = '｜' },
+        delete = { text = '｜' },
+        topdelete = { text = '｜' },
+        changedelete = { text = '｜' },
       },
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'

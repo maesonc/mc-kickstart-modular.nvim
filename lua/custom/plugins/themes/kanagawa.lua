@@ -44,13 +44,13 @@ return {
             FloatTitle = { bg = 'NONE' },
             NormalFloat = { bg = 'NONE' },
 
-            -- highlight for borders
+            -- Highlight for borders
             FloatBorder = { bg = 'NONE' },
             WinSeparator = { bg = 'NONE', fg = pal.fujiWhite },
             VertSplit = { bg = 'NONE', fg = 'NONE' },
             LineNr = { bg = 'NONE', fg = pal.winterYellow },
             CursorLine = { bg = pal.waveBlue1 },
-            CursorLineNr = { bg = pal.waveBlue1, fg = pal.carpYellow },
+            CursorLineNr = { bg = 'NONE', fg = pal.springGreen },
             CursorLineFold = { bg = 'NONE' },
             CursorLineSign = { bg = 'NONE' },
 
@@ -66,6 +66,10 @@ return {
             DiagnosticSignInfo = { bg = 'NONE' },
             DiagnosticSignWarn = { bg = 'NONE' },
             DiagnosticSignError = { bg = 'NONE' },
+
+            GitSignsAdd = { bg = 'NONE' },
+            GitSignsChange = { bg = 'NONE' },
+            GitSignsDelete = { bg = 'NONE' },
           }
         end,
         background = { -- map the value of 'background' option to a theme
