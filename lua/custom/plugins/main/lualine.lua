@@ -4,8 +4,8 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     init = function()
       local custom_color = require 'lualine.themes.nightfly'
-      custom_color.inactive.c.bg = 'NONE'
-      custom_color.inactive.c.fg = '#C8C093'
+      custom_color.inactive.c.bg = '#2c3043'
+      custom_color.inactive.c.fg = '#C0A36E'
       require('lualine').setup {
         options = {
           icons_enabled = true,

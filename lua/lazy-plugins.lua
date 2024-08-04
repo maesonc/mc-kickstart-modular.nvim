@@ -54,13 +54,15 @@ require('lazy').setup({
 
   require 'custom/plugins/main/dashboard',
 
-  require 'custom/plugins/main/floatterm',
+  -- require 'custom/plugins/main/floatterm',
+
+  require 'custom/plugins/main/toggleterm',
 
   require 'custom/plugins/main/eunuch',
 
   require 'custom/plugins/main/lsp-lines',
 
-  require 'custom/plugins/main/sunglasses',
+  -- require 'custom/plugins/main/sunglasses',
 
   require 'custom/plugins/main/markdown',
 
