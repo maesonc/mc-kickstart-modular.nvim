@@ -23,6 +23,9 @@ return {
       -- refer to the configuration section below
       delay = 2000,
     },
+    disable = {
+      bt = { 'terminal' },
+    },
     -- config = function() -- This is the function that runs, AFTER loading
     --   require('which-key').setup()
     --
