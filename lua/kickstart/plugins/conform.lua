@@ -34,6 +34,7 @@ return {
         -- is found.
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        sh = { 'shfmt', stop_after_first = true },
       },
     },
   },
