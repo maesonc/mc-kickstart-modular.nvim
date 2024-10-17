@@ -60,7 +60,7 @@ return {
         pickers = {
           find_files = {
             hidden = true,
-            file_ignore_patterns = { '.git/', '.cache', '%.o', '%.a', '%.out', '%.class', '%.pdf', '%.mkv', '%.mp4', '%.zip' },
+            file_ignore_patterns = { '.git/', '%.cache', '%.o', '%.a', '%.out', '%.class', '%.pdf', '%.mkv', '%.mp4', '%.zip' },
           },
         },
         defaults = {

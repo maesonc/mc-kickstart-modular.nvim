@@ -48,8 +48,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_set_keymap('n', '<leader>z', '<C-w>=', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>Z', '<C-w>|', { noremap = true, silent = true })
+local toggle = false
+
+vim.api.nvim_set_keymap('n', '<leader>z', '', {
+  noremap = true,
+  silent = true,
+  callback = function()
+    if toggle then
+      vim.cmd 'wincmd =' -- Equalize window sizes
+    else
+      vim.cmd 'wincmd |' -- Maximize the current window horizontally
+    end
+    toggle = not toggle -- Flip the toggle state
+  end,
+})
+-- vim.api.nvim_set_keymap('n', '<leader>z', '<C-w>=', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>Z', '<C-w>|', { noremap = true, silent = true })
 
 local function toggle_diffthis()
   local bufname = vim.api.nvim_buf_get_name(0)
@@ -74,3 +88,8 @@ end
 
 vim.api.nvim_set_keymap('n', '<leader>di', ':windo diffthis <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>dc', ':windo diffoff <CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>dg', '<cmd>Gvdiffsplit!<CR>', { noremap = true, silent = true })
+-- Mapping for <leader>dg1 to diffget the target branch
+vim.api.nvim_set_keymap('n', '<leader>dh', ':diffget //2 <CR>', { noremap = true, silent = true })
+-- Mapping for <leader>dg3 to diffget the feature branch
+vim.api.nvim_set_keymap('n', '<leader>dl', ':diffget //3 <CR>', { noremap = true, silent = true })

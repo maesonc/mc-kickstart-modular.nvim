@@ -23,7 +23,7 @@ return {
         local colors = require('kanagawa.colors').setup()
         require('toggleterm').setup {
           shell = 'fish -C "source ~/.config/fish/config.fish"',
-          size = 10,
+          size = 20,
           open_mapping = [[<leader>\]],
           shade_terminals = false,
           highlights = {
