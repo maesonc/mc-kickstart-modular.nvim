@@ -5,16 +5,13 @@ return {
       version = '*',
       config = function()
         function _G.set_terminal_keymaps()
-          local opts = { buffer = 0 }
+          local opts = { buffer = 0, silent = true }
           -- This is for fish vi keybindings to work in the terminal.
           vim.keymap.set('t', '<esc>', '<esc><leader>', opts)
-          vim.keymap.set('t', '<C-w>h', [[<Cmd>wincmd h<CR>]], opts)
-          vim.keymap.set('t', '<C-w>j', [[<Cmd>wincmd j<CR>]], opts)
-          vim.keymap.set('t', '<C-w>k', [[<Cmd>wincmd k<CR>]], opts)
-          vim.keymap.set('t', '<C-w>l', [[<Cmd>wincmd l<CR>]], opts)
-          -- vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
-          -- vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-          -- vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+          vim.keymap.set('t', '<C-w>h', [[<C-\><C-n><C-w>h]], opts)
+          vim.keymap.set('t', '<C-w>j', [[<C-\><C-n><C-w>j]], opts)
+          vim.keymap.set('t', '<C-w>k', [[<C-\><C-n><C-w>k]], opts)
+          vim.keymap.set('t', '<C-w>l', [[<C-\><C-n><C-w>l]], opts)
         end
 
         -- if you only want these mappings for toggle term use term://*toggleterm#* instead

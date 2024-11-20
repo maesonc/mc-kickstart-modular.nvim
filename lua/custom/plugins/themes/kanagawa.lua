@@ -48,7 +48,7 @@ return {
             FloatBorder = { bg = 'NONE' },
             WinSeparator = { bg = 'NONE', fg = pal.fujiWhite },
             VertSplit = { bg = 'NONE', fg = 'NONE' },
-            LineNr = { bg = 'NONE', fg = pal.winterYellow },
+            LineNr = { bg = 'NONE', fg = pal.fujiGray },
             CursorLine = { bg = pal.waveBlue1 },
             CursorLineNr = { bg = 'NONE', fg = pal.springGreen },
             CursorLineFold = { bg = 'NONE' },

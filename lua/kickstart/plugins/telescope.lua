@@ -71,6 +71,9 @@ return {
               ['<C-k>'] = actions.move_selection_previous,
             },
           },
+          preview = {
+            filesize_limit = 0.5555,
+          },
         },
         -- pickers = {}
         extensions = {

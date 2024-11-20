@@ -196,6 +196,13 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
+        emmet_language_server = {
+          filetypes = {
+            'html',
+            'vue',
+            'css',
+          },
+        },
         ts_ls = {
           single_file_support = false,
           root_dir = nvim_lsp.util.root_pattern('package.json', 'tsconfig.json', 'node_modules'),
@@ -220,7 +227,7 @@ return {
         },
         intelephense = {},
         volar = {
-          filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
+          filetypes = { 'vue' },
         },
         html = {},
         jedi_language_server = {},

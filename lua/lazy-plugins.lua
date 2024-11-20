@@ -28,6 +28,10 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
+  require 'custom/plugins/main/bracey',
+
+  require 'custom/plugins/main/ufo',
+
   require 'kickstart/plugins/which-key',
 
   require 'kickstart/plugins/telescope',
@@ -71,8 +75,6 @@ require('lazy').setup({
   require 'custom/plugins/main/obsidian',
 
   require 'custom/plugins/main/statuscol',
-
-  require 'custom/plugins/main/ufo',
 
   require 'kickstart/plugins/gitsigns',
 
